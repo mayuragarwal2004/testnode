@@ -7,6 +7,10 @@ const app = express();
 // Define a port for the server to listen on
 const PORT = 3000;
 
+app.post("/test", (req, res) => {
+    res.status(200).json({ message: "Hello, this is a test route by post!" });
+  });
+
 // Create a simple GET route
 app.get("/test", (req, res) => {
   res.status(200).json({ message: "Hello, this is a test route!" });
